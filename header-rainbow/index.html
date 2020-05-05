@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Raibow header usage example</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
+    <script defer type="module" src="./cards.js"></script>
+
+    <style type="text/css">
+      html { 
+        margin: 0 auto;
+        font-size: 55%;  
+        width: 50vw;
+      }
+      @media only screen and (max-device-width: 480px) {
+	      html { 
+          font-size: 100%; 
+          width: 75vw;
+        }
+      }
+      
+      body {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        place-items: center;
+        font-family: 'Lucida Console', Monaco, monospace;
+        font-size: 22px;
+        border-right: 1px dotted rgb(20, 139, 70);
+        border-left: 1px dotted rgb(106, 30, 71);
+      }
+      @media screen and (min-width: 480px)   {
+        body { font-size: 1.9rem; }
+      }
+ 
+      header {
+        position: relative;
+        margin-top: 8vh;
+      }
+      footer {
+        margin-top: 8vh;
+      }
+      article {
+        position: relative;
+        color: black;
+        margin-top: 4.5vw;
+      }
+      article a {
+        text-decoration: none;
+        color: black;
+      }
+      article a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      .darkmode--activated article,
+      .darkmode--activated article a,
+      .darkmode--activated h3,
+      .darkmode--activated header {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body onmouseover="">
+    <my-header></my-header>
+
+    <header>
+      <h3>Srdjan Strbanovic</br>
+          Software Engineer</br>
+          NYC Tri-State Area
+      </h3>
+    </header>
+
+    <article>
+      <h3>Portals</h3>
+      <a href="http://github.com/srdjan">@github</a>&emsp;
+      <a href="http://gotium.com">@blog</a>&emsp;
+      <a href="https://twitter.com/djidja8">@twitter</a>
+    </article>
+
+    <article>
+      <h3>Work, now</h3>
+      • Co-Founder & CTO&emsp;<a href="https://klinchit.app">@KlinchIt.app</a><br/>
+    </article>
+
+    <article>
+      <h3>Work, before</h3>
+      • Chief Architect&emsp;<a href="https://lifion.com/">@Lifion by ADP</a><br/>
+      • Principal Architect&emsp;<a href=https://www.thoughtworks.com/">@ThoughtWorks</a><br/>
+      • CTO&emsp;<a href="https://www.cignium.com/">@Cignium</a><br/>
+    </article>
+
+    <footer>-</footer>
+    <script>
+      new Darkmode().showWidget()
+    </script>
+  </body>
+</html>
